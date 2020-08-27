@@ -9,14 +9,14 @@ bool isInsideRange(float vitalValue, float lowerLimit, float upperLimit)
 bool vitalsAreOk(float bpm, float spo2, float respRate)
 {
   return isInsideRange(bpm, 70, 150) &&
-         isInsideRange(spo2, 90, 10000) &&
+         isInsideRange(spo2, 90, 100) &&
          isInsideRange(respRate, 30, 95);
 }
 
 int main()
 {
-  assert(isInsideRange(85, 65, 95) == true);
-  assert(isInsideRange(55, 90, 1000) == false); //below lower limit
+  assert(isInsideRange(85, 65, 95) == true);    //inside limit
+  assert(isInsideRange(55, 90, 100) == false);  //below lower limit
   assert(isInsideRange(170, 95, 150) == false); //above upper limit
   std::cout<<"isInsideRange is good to go!"<<std::endl;
 
