@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "string"
+#include <iostream>
 
 bool isInsideRange(float vitalValue, float lowerLimit, float upperLimit)
 {
@@ -16,8 +16,11 @@ bool vitalsAreOk(float bpm, float spo2, float respRate)
 int main()
 {
   assert(isInsideRange(85, 65, 95) == true);
-  assert(isInsideRange(55, 90, 1000) == false);
+  assert(isInsideRange(55, 90, 1000) == false); //below lower limit
+  assert(isInsideRange(170, 95, 150) == false); //above upper limit
+  std::cout<<"isInsideRange is good to go!"<<std::endl;
 
   assert(vitalsAreOk(80, 95, 60) == true);
   assert(vitalsAreOk(60, 90, 40) == false);
+  std::cout<<"Vitals are ok!"<<std::endl;
 }
