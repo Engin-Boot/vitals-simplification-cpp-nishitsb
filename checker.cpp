@@ -15,6 +15,9 @@ bool vitalsAreOk(float bpm, float spo2, float respRate)
 
 int main()
 {
+  assert(isInsideRange(85, 65, 95) == true);
+  assert(isInsideRange(55, 90, 1000) == false);
+
   assert(vitalsAreOk(80, 95, 60) == true);
   assert(vitalsAreOk(60, 90, 40) == false);
 }
