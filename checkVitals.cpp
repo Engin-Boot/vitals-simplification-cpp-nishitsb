@@ -1,10 +1,10 @@
 #include "checkVitals.h"
 
-AlertMessages a[numberOfInputsInConfig];
+AllMessages a[numberOfInputVitals];
 
-AlertMessages *checkVitals(VitalCheckerInstance *v)
+AllMessages *checkVitals(VitalCheckerInstance *v)
 {
-    for (int i = 0; i < numberOfInputsInConfig; i++)
+    for (int i = 0; i < numberOfInputVitals; i++)
     {
         a[i].vitalName = v[i].vitalName;
         a[i].message = v[i].range->checkAgainstRange(allInputVitalValues[i].value);

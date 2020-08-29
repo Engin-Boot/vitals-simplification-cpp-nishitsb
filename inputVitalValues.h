@@ -8,7 +8,7 @@ struct InputVitalValue
     int value;
 };
 
-InputVitalValue const allInputVitalValues[numberOfInputsInConfig] = {
+InputVitalValue const allInputVitalValues[numberOfInputVitals] = {
     {"bpm", 75},
     {"spo2", 70},
     {"respRate", 85}};

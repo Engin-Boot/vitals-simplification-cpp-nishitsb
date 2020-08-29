@@ -4,12 +4,12 @@
 #include "inputVitalValues.h"
 #include "initiateRangeChecker.h"
 
-struct AlertMessages
+struct AllMessages
 {
   const char *vitalName;
   const char *message;
 };
 
-AlertMessages* checkVitals(VitalCheckerInstance*);
+AllMessages* checkVitals(VitalCheckerInstance*);
 
 #endif

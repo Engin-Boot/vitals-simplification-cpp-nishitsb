@@ -15,6 +15,6 @@ const char *RangeChecker::checkAgainstRange(int value)
     }
     else
     {
-        return "is Ok";
+        return "is ok";
     }
 }

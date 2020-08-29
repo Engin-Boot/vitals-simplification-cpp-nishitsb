@@ -1,13 +1,13 @@
 #include "initiateRangeChecker.h"
 
-VitalCheckerInstance vc[numberOfInputsInConfig];
+VitalCheckerInstance vc[numberOfInputVitals];
 
 VitalCheckerInstance *initiateRangeChecker()
 {
-  for (int i = 0; i < numberOfInputsInConfig; i++)
+  for (int i = 0; i < numberOfInputVitals; i++)
   {
-    RangeChecker *range = new RangeChecker(inputConfig[i].lower, inputConfig[i].upper);
-    vc[i].vitalName = inputConfig[i].vitalName;
+    RangeChecker *range = new RangeChecker(inputVitalsConfig[i].lower, inputVitalsConfig[i].upper);
+    vc[i].vitalName = inputVitalsConfig[i].vitalName;
     vc[i].range = range;
   }
   return vc;
