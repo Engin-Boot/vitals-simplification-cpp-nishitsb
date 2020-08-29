@@ -1,6 +1,5 @@
 #ifndef RANGE_CHECKER
 #define RANGE_CHECKER
-#include "inputConfig.h"
 
 class RangeChecker
 {

@@ -1,8 +1,7 @@
 #ifndef INITIATE_RANGE_CHECKER
 #define INITIATE_RANGE_CHECKER
 #include "RangeChecker.h"
-
-void initiateRangeChecker(const InputVitalInfo*);
+#include "inputConfig.h"
 
 struct VitalCheckerInstance
 {
@@ -10,6 +9,6 @@ struct VitalCheckerInstance
   RangeChecker *range;
 };
 
-VitalCheckerInstance vitalCheckers[numberOfInputsInConfig];
+VitalCheckerInstance* initiateRangeChecker();
 
 #endif
