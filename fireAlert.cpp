@@ -9,10 +9,7 @@ void fireAlert(AllMessages *messages, Alerter *alerters)
     {   
         if (strcmp(messages[i].message, "is ok"))
         {
-            for (int j = 0; j < numberOfInputAlerts; j++)
-            {
-                alerters[j].alerter->alert(messages[i].vitalName, messages[i].message);
-            }
+            triggerAllALerter(messages[i], alerters);
         }
     }
 }
