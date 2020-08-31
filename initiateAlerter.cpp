@@ -1,6 +1,10 @@
 #include "initiateAlerter.h"
 #include "inputConfig.h"
 
+Alerter allAlerters[] = {
+    {new AlertWithSMS},
+    {new AlertWithSound}};
+
 Alerter alerters[numberOfInputAlerts];
 
 Alerter *initiateAlerters()
@@ -8,19 +12,7 @@ Alerter *initiateAlerters()
     for (int i = 0; i < numberOfInputAlerts; i++)
     {
         AlertInterface *alrt;
-        switch (inputAlertsConfig[i].alertId)
-        {
-        case 0:
-            alrt = new AlertWithSMS;
-            alerters[i].alerter = alrt;
-            break;
-        case 1:
-            alrt = new AlertWithSound;
-            alerters[i].alerter = alrt;
-            break;
-        default:
-            break;
-        }
+        alerters[i].alerter = allAlerters[inputAlertsConfig[i].alertId].alerter;
     }
     return alerters;
 }

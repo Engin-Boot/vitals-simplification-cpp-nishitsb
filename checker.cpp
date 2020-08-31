@@ -1,5 +1,3 @@
-#include <assert.h>
-#include <iostream>
 #include "initiateRangeChecker.h"
 #include "checkVitals.h"
 #include "initiateAlerter.h"
