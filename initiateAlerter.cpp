@@ -1,9 +1,7 @@
 #include "initiateAlerter.h"
 #include "inputConfig.h"
 
-Alerter allAlerters[] = {
-    {new AlertWithSMS},
-    {new AlertWithSound}};
+Alerter allAlerters[] = {new AlertWithSMS, new AlertWithSound};
 
 Alerter alerters[numberOfInputAlerts];
 
