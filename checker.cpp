@@ -2,7 +2,6 @@
 #include "checkVitals.h"
 #include "initiateAlerter.h"
 #include "fireAlert.h"
-#include "deleteAlerters.h"
 
 int main()
 {
