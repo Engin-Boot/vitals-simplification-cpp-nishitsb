@@ -2,6 +2,8 @@
 #include "checkVitals.h"
 #include "initiateAlerter.h"
 #include "fireAlert.h"
+#include "deleteAlerters.h"
+#include "deleteVitalsCheckers.h"
 
 int main()
 {
@@ -16,4 +18,10 @@ int main()
 
   //fire alerts
   fireAlert(messages, alerters);
+
+  //delete alerters
+  deleteAlerters(alerters);
+
+  //delete vitalCheckers
+  deleteVitalsCheckers(vitalCheckers);
 }
