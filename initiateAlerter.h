@@ -2,10 +2,7 @@
 #define INITIATE_ALERTER
 #include "Alert.h"
 
-struct Alerter
-{
-    AlertInterface* alerter;
-};
+typedef AlertInterface* Alerter;
 
 Alerter* initiateAlerters();
 
