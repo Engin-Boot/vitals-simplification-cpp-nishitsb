@@ -1,17 +1,27 @@
-#include <assert.h>
+#include "initiateRangeChecker.h"
+#include "checkVitals.h"
+#include "initiateAlerter.h"
+#include "fireAlert.h"
+#include "deleteAlerters.h"
+#include "deleteVitalsCheckers.h"
 
-bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  if(bpm < 70 || bpm > 150) {
-    return false;
-  } else if(spo2 < 90) {
-    return false;
-  } else if(respRate < 30 || respRate > 95) {
-    return false;
-  }
-  return true;
-}
+int main()
+{
+  //Vital-Integrator
+  VitalCheckerInstance *vitalCheckers = initiateRangeChecker();
 
-int main() {
-  assert(vitalsAreOk(80, 95, 60) == true);
-  assert(vitalsAreOk(60, 90, 40) == false);
+  //Alert-Integrator
+  Alerter *alerters = initiateAlerters();
+
+  //all messages
+  AllMessages *messages = checkVitals(vitalCheckers);
+
+  //fire alerts
+  fireAlert(messages, alerters);
+
+  //delete alerters
+  deleteAlerters(alerters);
+
+  //delete vitalCheckers
+  deleteVitalsCheckers(vitalCheckers);
 }
