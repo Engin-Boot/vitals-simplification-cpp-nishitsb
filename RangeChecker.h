@@ -9,7 +9,7 @@ private:
 
 public:
     RangeChecker(int, int);
-    const char *checkAgainstRange(int);
+    const char *checkAgainstRange(int) const;
 };
 
 #endif

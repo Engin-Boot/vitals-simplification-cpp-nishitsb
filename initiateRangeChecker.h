@@ -6,7 +6,7 @@
 struct VitalCheckerInstance
 {
   const char *vitalName;
-  RangeChecker *range;
+  RangeChecker const *range;
 };
 
 VitalCheckerInstance* initiateRangeChecker();

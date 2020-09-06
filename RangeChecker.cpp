@@ -3,7 +3,7 @@
 RangeChecker::RangeChecker(int lower, int upper) : lowerLimit(lower),
                                                    upperLimit(upper) {}
 
-const char *RangeChecker::checkAgainstRange(int value)
+const char *RangeChecker::checkAgainstRange(int value) const
 {
     if (value <= lowerLimit)
     {

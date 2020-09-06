@@ -1,6 +1,8 @@
 #ifndef ALERT
 #define ALERT
 
+//add destructor method
+
 class AlertInterface
 {
 public:

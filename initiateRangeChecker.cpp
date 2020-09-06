@@ -6,7 +6,7 @@ VitalCheckerInstance *initiateRangeChecker()
 {
   for (int i = 0; i < numberOfInputVitals; i++)
   {
-    RangeChecker *range = new RangeChecker(inputVitalsConfig[i].lower, inputVitalsConfig[i].upper);
+    RangeChecker const *range = new RangeChecker(inputVitalsConfig[i].lower, inputVitalsConfig[i].upper);
     vc[i].vitalName = inputVitalsConfig[i].vitalName;
     vc[i].range = range;
   }
